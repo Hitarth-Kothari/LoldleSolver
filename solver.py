@@ -98,8 +98,9 @@ def solve_loldle(tree_model, X, y):
                 print(f"Current Guess Row: {current_guess_row}")
                 tree_model, X, y = update_tree_based_on_feedback(tree_model, X, y, feedback_vector, current_guess_row)
                 current_guess, current_guess_index = get_initial_guess(tree_model, X, y)
-                print(len(y))
-                print(current_guess_index)
+                # print(len(y))
+                # print(current_guess_index)
+                # print(y)
                 print(f'Next Guess: {current_guess}')
             except IndexError as e:
                 print(f"Error: {e}")
