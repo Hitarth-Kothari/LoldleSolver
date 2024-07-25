@@ -47,7 +47,7 @@ def get_initial_guess(tree_model, X, y):
     if isinstance(initial_guess_index, (list, tuple, np.ndarray)):
         initial_guess_index = initial_guess_index[0]
     initial_guess = y.iloc[initial_guess_index] if initial_guess_index < len(y) else y.iloc[0]
-    if initial_guess_index > len(y):
+    if initial_guess_index >= len(y):
         initial_guess_index = 0
     return initial_guess, initial_guess_index
 
